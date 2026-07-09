@@ -170,7 +170,7 @@
 @media (max-width:600px){
     .announce-content h1{ font-size:12vw; }
 }
-+
+
 /* Preview button for testing (temporary) */
 #previewBtn{
     position:fixed;

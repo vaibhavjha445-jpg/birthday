@@ -200,7 +200,7 @@
 
   <script src="script.js"></script>
 
-  <button id="endBtn" class="end-btn">End</button>
+  <button id="endBtn" class="end-btn hidden">End</button>
 
   <div id="finalMessage" class="hidden final-overlay" aria-hidden="true">
     <div class="final-text">I LOVE YOU THE MOST, MY GIRL</div>
@@ -227,7 +227,10 @@
 
     document.addEventListener('DOMContentLoaded', ()=>{
       const btn = document.getElementById('endBtn');
-      if(btn) btn.addEventListener('click', showFinalMessage);
+      if(btn){
+        btn.classList.add('hidden');
+        btn.addEventListener('click', showFinalMessage);
+      }
     });
   </script>
   <button id="previewBtn" title="Preview celebration">Preview</button>
