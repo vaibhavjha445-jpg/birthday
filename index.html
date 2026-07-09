@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Meri Jaan ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="background">
+    <div id="gradient"></div>
+    <div id="sparkles"></div>
+    <div id="hearts"></div>
+    <div id="petals"></div>
+  </div>
+
+  <div class="floating-bear teddy1">🧸</div>
+  <div class="floating-bear teddy2">🧸</div>
+  <div class="floating-bear teddy3">🧸</div>
+  <div class="floating-bear teddy4">🧸</div>
+
+  <section id="landingPage" class="panel">
+    <div class="glass-card">
+      <div class="topGlow"></div>
+      <p class="tinyTitle">Made with all my love...</p>
+      <h1>Riddhi 🌸</h1>
+      <div class="line"></div>
+      <div class="mainBear">🧸</div>
+
+      <div id="typingContainer">
+        <p class="typeLine" id="line1"></p>
+        <p class="typeLine" id="line2"></p>
+        <p class="typeLine" id="line3"></p>
+        <p class="typeLine" id="line4"></p>
+        <p class="typeLine" id="line5"></p>
+      </div>
+
+      <div id="countdown">
+        <div class="timeBox"><span id="days">00</span><p>Days</p></div>
+        <div class="timeBox"><span id="hours">00</span><p>Hours</p></div>
+        <div class="timeBox"><span id="minutes">00</span><p>Minutes</p></div>
+        <div class="timeBox"><span id="seconds">00</span><p>Seconds</p></div>
+      </div>
+
+      <button id="waitButton">💛 Wait With Me</button>
+      <p class="bottomText">Every second brings me closer to celebrating the most beautiful person in my life.</p>
+    </div>
+  </section>
+
+  <section id="celebrationPage" class="panel hidden">
+    <div class="celebration-card">
+      <button id="startButton" class="big-start">✨ Start Celebration ✨</button>
+
+      <div id="decorations" class="decorations hidden"></div>
+
+      <div id="cakeStage" class="cake-stage hidden">
+        <div class="cake-glow"></div>
+        <div class="cake big-cake" aria-hidden="false">
+          <div class="plate"></div>
+          <div class="cake-layer layer1"></div>
+          <div class="cake-layer layer2"></div>
+          <div class="cake-frosting"></div>
+          <div class="candles-row">
+            <button class="candle" data-candle="1">
+              <svg class="flame" viewBox="0 0 24 24" width="18" height="22" aria-hidden="true"><path fill="#ffd36a" d="M12 2s4 3 4 6-1.8 4-4 6c-2.2-2-4-3.2-4-6S12 2 12 2z"/><path fill="#ff7a8a" d="M12 2s2.5 2.1 2.5 4S12 9 12 9 9.5 8.1 9.5 6 12 2 12 2z"/></svg>
+            </button>
+            <button class="candle" data-candle="2">
+              <svg class="flame" viewBox="0 0 24 24" width="18" height="22" aria-hidden="true"><path fill="#ffd36a" d="M12 2s4 3 4 6-1.8 4-4 6c-2.2-2-4-3.2-4-6S12 2 12 2z"/><path fill="#ff7a8a" d="M12 2s2.5 2.1 2.5 4S12 9 12 9 9.5 8.1 9.5 6 12 2 12 2z"/></svg>
+            </button>
+            <button class="candle" data-candle="3">
+              <svg class="flame" viewBox="0 0 24 24" width="18" height="22" aria-hidden="true"><path fill="#ffd36a" d="M12 2s4 3 4 6-1.8 4-4 6c-2.2-2-4-3.2-4-6S12 2 12 2z"/><path fill="#ff7a8a" d="M12 2s2.5 2.1 2.5 4S12 9 12 9 9.5 8.1 9.5 6 12 2 12 2z"/></svg>
+            </button>
+            <button class="candle" data-candle="4">
+              <svg class="flame" viewBox="0 0 24 24" width="18" height="22" aria-hidden="true"><path fill="#ffd36a" d="M12 2s4 3 4 6-1.8 4-4 6c-2.2-2-4-3.2-4-6S12 2 12 2z"/><path fill="#ff7a8a" d="M12 2s2.5 2.1 2.5 4S12 9 12 9 9.5 8.1 9.5 6 12 2 12 2z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div id="letterScene" class="letter-scene hidden">
+        <div class="envelope">💌</div>
+        <div class="letter-card">
+          <h3>For  meri jaan</h3>
+          <div id="letterText"></div>
+        </div>
+      </div>
+      <!-- Post-cake menu with stylish buttons -->
+      <div id="postMenu" class="post-menu hidden">
+        <button class="post-btn" id="photosBtn">📷 Our Photos</button>
+        <button class="post-btn" id="flipsBtn">💌 Flip Messages</button>
+        <button class="post-btn" id="reasonsBtn">🌟 18 Reasons</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fullscreen announcement shown when the countdown reaches zero -->
+  <div id="announcement" class="hidden">
+    <div class="announce-content">
+      <h1 id="announceText">Happy Birthdayyyyy Riddhi!!! 🎉🎂</h1>
+    </div>
+  </div>
+    <!-- Confetti canvas (physics-based) -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Audio + mic controls -->
+    <div id="audioControls">
+      <audio id="bgAudio" loop src="audio/birthday.mp3"></audio>
+      <button id="muteBtn" title="Mute / Unmute">🔈</button>
+      <button id="micBtn" title="Blow to wish">🎤 Blow to wish</button>
+    </div>
+
+  <section id="memorySection" class="panel hidden">
+    <div class="memory-card">
+      <h2>Our little love menu 🌷</h2>
+      <p class="memory-sub">A few tiny sweet things, just like you.</p>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <h3>1. First smile</h3>
+          <p>Your smile turns every ordinary moment into something soft and beautiful.</p>
+        </div>
+        <div class="menu-card">
+          <h3>2. Warm virtual hugs</h3>
+          <p>The kind that make the whole world feel calm and safe.</p>
+        </div>
+        <div class="menu-card">
+          <h3>3. Tiny joys</h3>
+          <p>Even the simplest moments feel magical with you beside me.</p>
+        </div>
+      </div>
+
+      <div class="photo-grid">
+        <figure class="photo-card">
+          <img src="images/photo1.svg" alt="A sweet memory" />
+          <figcaption>First little giggles 💗</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/photo2.svg" alt="A sweet memory" />
+          <figcaption>Soft pink dreams 🌸</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/photo3.svg" alt="A sweet memory" />
+          <figcaption>Happy hearts forever 💛</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/photo4.svg" alt="A sweet memory" />
+          <figcaption>Just us and the stars ✨</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photos modal -->
+  <div id="photosModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-modal" id="closePhotos">✕</button>
+      <h2>Our Photos</h2>
+      <div class="photo-grid large">
+        <figure class="photo-card"><img src="images/photo1.svg" alt=""/><figcaption>Memory 1</figcaption></figure>
+        <figure class="photo-card"><img src="images/photo2.svg" alt=""/><figcaption>Memory 2</figcaption></figure>
+        <figure class="photo-card"><img src="images/photo3.svg" alt=""/><figcaption>Memory 3</figcaption></figure>
+        <figure class="photo-card"><img src="images/photo4.svg" alt=""/><figcaption>Memory 4</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flip messages modal -->
+  <div id="flipsModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-modal" id="closeFlips">✕</button>
+      <h2>Messages for You</h2>
+      <div id="flipCard" class="flip-card">Tap to flip</div>
+    </div>
+  </div>
+
+  <!-- Reasons modal -->
+  <div id="reasonsModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-modal" id="closeReasons">✕</button>
+      <h2>18 Reasons I Love You</h2>
+      <ol id="reasonsList" class="reasons-list"></ol>
+    </div>
+  </div>
+
+  <!-- Envelope modal (letter) -->
+  <div id="envelopeModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-modal" id="closeEnvelope">✕</button>
+      <h2>For My Riddhi — A Letter</h2>
+      <div class="letter-body">
+        <p>Riddhi, today you turn 18  a beautiful milestoneand i cant belive that my girl that we came so far along... I wrote this letter from my heart to tell you how much you mean to me. You are my sunshine, my calm, and my favourite person. Happy 18th birthday, meri jaan. With all my love, always.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <button id="endBtn" class="end-btn">End</button>
+
+  <div id="finalMessage" class="hidden final-overlay" aria-hidden="true">
+    <div class="final-text">I LOVE YOU THE MOST, MY GIRL</div>
+  </div>
+
+  <script>
+    function showFinalMessage(){
+      const overlay = document.getElementById('finalMessage');
+      if(!overlay) return;
+      overlay.classList.remove('hidden');
+      overlay.classList.add('show');
+      overlay.setAttribute('aria-hidden','false');
+      // hide scattered buttons if present
+      const sc = document.getElementById('scatteredContainer');
+      if(sc) sc.style.display = 'none';
+      // trigger confetti if available
+      if (window.createConfetti) {
+        try{ window.createConfetti(250); }catch(e){}
+      }
+      // small pulse to draw attention
+      const endBtn = document.getElementById('endBtn');
+      if(endBtn) endBtn.classList.add('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const btn = document.getElementById('endBtn');
+      if(btn) btn.addEventListener('click', showFinalMessage);
+    });
+  </script>
+  <button id="previewBtn" title="Preview celebration">Preview</button>
+</body>
+</html>
